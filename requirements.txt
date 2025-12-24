@@ -4,5 +4,6 @@ soundfile==0.12.1
 gunicorn==21.2.0
 huggingface_hub==0.20.3
 
-# CPU-only PyTorch (NO CUDA)
-torch==2.1.2+cpu
+# CPU-only PyTorch (forced)
+torch==2.1.2 ; platform_system == "Linux"
+--extra-index-url https://download.pytorch.org/whl/cpu
